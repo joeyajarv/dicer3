@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: Joey Jarvenpaa, Anne Johnson, R.I.P. Gabe Meyerson
+VERSION: 1.0
+CREATED: 2.06.2017
+ASSIGNMENT: Dicer
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Magic Dicer of stuff that can do things!!!</title>
+    <link href="./foundation.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="body">
+
+<div id="background">
+</div>
+
+<div class="container text-center">
+    <h1 class="text-center">RICE DOLLER</h1>
+    <div class="row text-center">
+        <div class="large-12 column">
+            <div>
+                <input type="radio" id="a-option" name="selector">
+                <label for="a-option">
+                    <h4>d4</h4>
+                </label>
+            </div>
+            <div>
+                <input type="radio" id="b-option" name="selector">
+                <label for="b-option">
+                    <h4>d6</h4>
+                </label>
+            </div>
+            <div>
+                <input type="radio" id="c-option" name="selector">
+                <label for="c-option">
+                    <h4>d8</h4>
+                </label>
+            </div>
+            <div>
+                <input type="radio" id="d-option" name="selector">
+                <label for="d-option">
+                    <h4>d12</h4>
+                </label>
+            </div>
+            <input type="radio" id="e-option" name="selector">
+            <label for="e-option">
+                <h4>d20</h4>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 text-centered columns">
+            <label>Number of Dice
+                <input type="text" placeholder="1-10" id="numberOfDice">
+            </label>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <div class="callout" id="hide-this">
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 text-centered columns">
+            <div class="button text-centered float-center" id="button">gamble your life away</div>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAoI2fokxlcI37VuIhVZgpBowTJy0SP2QQ",
+        authDomain: "dicer-30559.firebaseapp.com",
+        databaseURL: "https://dicer-30559.firebaseio.com",
+        storageBucket: "dicer-30559.appspot.com",
+        messagingSenderId: "958027636253"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script src="./main.js"></script>
+
+</body>
+</html>
+
